@@ -13,7 +13,8 @@
 
 Route::get('/', function()
 {
-	$faker = Faker\Factory::create();
+	$faker = Faker\Factory::create('nl_NL');
+	$faker->addProvider(new Faker\Provider\nl_BE\Person($faker));
 	$questions = array( 'Grote tak is van boom gevallen',
 						'Vuilnisbakken tekort bij Sint-Pieters plein',
 						'Hoe lang duren de werken nog?',
@@ -24,8 +25,8 @@ Route::get('/', function()
 
 Route::get('/questions', function()
 {
-	$faker = Faker\Factory::create();
-	
+	$faker = Faker\Factory::create('nl_NL');
+
 	$questions = array( 'Grote tak is van boom gevallen',
 						'Vuilnisbakken tekort bij Sint-Pieters plein',
 						'Hoe lang duren de werken nog?',
