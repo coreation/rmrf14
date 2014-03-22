@@ -15,11 +15,11 @@
 			{{ $faker->text(600) }}
 
 			<div class="tags">
-				<a href="{{ URL::to('/tag') }}" class="label label-default">{{ $faker->text(10) }}</a>
-				<a href="{{ URL::to('/tag') }}" class="label label-default">{{ $faker->text(10) }}</a>
-				<a href="{{ URL::to('/tag') }}" class="label label-default">{{ $faker->text(10) }}</a>
+				<a href="#" class="label label-default">{{ $faker->text(10) }}</a>
+				<a href="#" class="label label-default">{{ $faker->text(10) }}</a>
+				<a href="#" class="label label-default">{{ $faker->text(10) }}</a>
 			</div>
-			<div class="started">{{ $faker->randomNumber(1) }} minuten geleden <a href="">{{ $faker->name }}</a> {{ $faker->randomNumber(2) }}</div>
+			<div class="started">{{ $faker->randomNumber(1) }} minuten geleden <a href="#">{{ $faker->name }}</a> {{ $faker->randomNumber(2) }}</div>
 		</div>
 	</div>
 
@@ -37,7 +37,7 @@
 			</div>
 			<div class="summary">
 				{{ $faker->text }}
-				<div class="started">{{ $faker->randomNumber(1) }} minuten geleden <a href="">{{ $faker->name }}</a> {{ $faker->randomNumber(2) }}</div>
+				<div class="started">{{ $faker->randomNumber(1) }} minuten geleden <a href="#">{{ $faker->name }}</a> {{ $faker->randomNumber(2) }}</div>
 			</div>
 		</div>
 		@endfor
