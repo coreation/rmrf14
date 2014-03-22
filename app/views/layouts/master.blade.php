@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div class="header">
+    <div class="bar">
         <div class="container">
             <div class="region">Regio Gent</div>
             <div class="search">
@@ -21,18 +21,18 @@
 
 	<div class='container'>
 
-	    <header>
-	    	<h1>Bread Crumbs</h1>
-	    	<span class="label label-default">Vragen</span>
-	    	<span class="label label-default">Tags</span>
-	    	<span class="label label-default">Gebruikers</span>
-	    	<span class="label label-danger pull-right">Nieuwe vraag</span>
-	    </header>
+	    <div class="header">
+            <div class="ask pull-right">
+                <a href="{{ URL::to('ask') }}" class="btn btn-primary">Nieuwe vraag</a>
+            </div>
+
+            <div class="logo">
+                <img src="{{ URL::asset('img/logo.png') }}">
+            </div>
+	    </div>
+
 	    @yield('content')
 	</div>
 
-    <footer>
-        Bread Crumbs by RM RF
-    </footer>
 </body>
 </html>
