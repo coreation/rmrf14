@@ -27,7 +27,7 @@
             </div>
 
             <div class="logo">
-                <img src="{{ URL::asset('img/logo.png') }}">
+                <a href="{{ URL::to('/') }}"><img src="{{ URL::asset('img/logo.png') }}"></a>
             </div>
 	    </div>
 

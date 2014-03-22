@@ -18,7 +18,11 @@
 				<div class="count">{{ $faker->randomNumber(2) }}</div>
 				<div>votes</div>
 			</div>
+			@if ($i == 3 or $i == 8 or $i == 4)
+			<div class="answers answered">
+			@else
 			<div class="answers">
+			@endif
 				<div class="count">{{ $faker->randomNumber(1) }}</div>
 				<div>answers</div>
 			</div>
