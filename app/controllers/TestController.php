@@ -14,6 +14,6 @@ class TestController extends Controller
 
     public function testDb()
     {
-        dd($this->question->getQuestions());
+        dd($this->question->getTopQuestions());
     }
 }

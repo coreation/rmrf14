@@ -27,7 +27,8 @@ class AnswerRepository extends BaseRepository implements repositories\interfaces
      */
     public function getTopAnswer($id)
     {
-        return "top answer!";
+        //TODO
+        return [];
     }
 
     /**
