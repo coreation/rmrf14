@@ -11,4 +11,21 @@
 |
 */
 
-Route::get('/', 'TestController@testDb');
+Route::get('/', function()
+{
+	$faker = Faker\Factory::create();
+
+	return View::make('home', array('faker' => $faker));
+});
+
+Route::get('/questions', function()
+{
+	return View::make('question');
+});
+
+Route::get('/ask', function()
+{
+	return View::make('ask');
+});
+
+Route::get('/testrepos', 'TestController@testDb');

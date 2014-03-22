@@ -28,7 +28,7 @@ class QuestionRepository extends BaseRepository implements QuestionRepositoryInt
      */
     public function getById($id)
     {
-        return $this->model->find($id)->with('answers')->get()->toArray();
+        return $this->model->find($id)->with('answers', 'tags')->get()->toArray();
     }
 
 
@@ -55,7 +55,7 @@ class QuestionRepository extends BaseRepository implements QuestionRepositoryInt
      */
     public function getQuestions($limit = PHP_INT_MAX, $offset = 0)
     {
-        return $this->model->take($limit)->skip($offset)->get()->toArray();
+        return $this->model->take($limit)->skip($offset)->with('tags', 'answers')->get()->toArray();
     }
 
     /**

@@ -28,9 +28,9 @@ class InitAnswer extends Migration
             $table->timestamps();
         });
 
-        Schema::create('answer_tag', function($table){
+        Schema::create('question_tag', function($table){
             $table->increments('id');
-            $table->integer('answer_id');
+            $table->integer('question_id');
             $table->integer('tag_id');
             $table->timestamps();
         });
@@ -46,6 +46,6 @@ class InitAnswer extends Migration
         // Drop the answer table
         Schema::drop('answers');
         Schema::drop('tags');
-        Schema::drop('answer_tag');
+        Schema::drop('question_tag');
     }
 }

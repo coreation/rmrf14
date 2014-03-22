@@ -35,5 +35,13 @@ class DatabaseSeeder extends Seeder
                 'votes' => 0,
             ]
         );
+
+        $tag = \Tag::create(
+            [
+                'name' => 'Cultural heritage'
+            ]
+        );
+
+        $question->tags()->attach($tag->id);
     }
 }
