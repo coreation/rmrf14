@@ -29,3 +29,5 @@ Route::get('/ask', function()
 {
 	return View::make('ask');
 });
+
+Route::get('/testrepos', 'TestController@testDb');

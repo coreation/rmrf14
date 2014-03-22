@@ -14,10 +14,13 @@ class InitDb extends Migration
     public function up()
     {
         // Create feedback database
-        Schema::create('question', function($table){
+        Schema::create('questions', function($table){
             $table->increments('id');
-            $table->string('question', 255);
-            $table->text('votes');
+            $table->text('question');
+            $table->integer('votes');
+            $table->string('title', 255);
+            $table->double('latitude', 15, 8);
+            $table->double('longitude', 15, 8);
             $table->timestamps();
         });
     }
@@ -30,6 +33,6 @@ class InitDb extends Migration
     public function down()
     {
         // Drop feedback database
-        Schema::drop('question');
+        Schema::drop('questions');
     }
 }
