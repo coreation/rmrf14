@@ -3,16 +3,15 @@
 namespace repositories;
 
 use repositories\BaseRepository;
-use repositories\interfaces\QuestionRepositoryInterface;
 
 // titel  tags body
 // answers -> upvoting
 // question -> upvoting
 // category locatie
-class QuestionRepository extends BaseRepository implements QuestionRepositoryInterface
+class AnswerRepository extends BaseRepository implements repositories\interfaces\AnswerRepositoryInterface
 {
 
-    public function __construct(\Question $model)
+    public function __construct(\Answer $model)
     {
         parent::__construct();
 
@@ -20,42 +19,15 @@ class QuestionRepository extends BaseRepository implements QuestionRepositoryInt
     }
 
     /**
-     * Get a question based on an id, with tags and answers
+     * Get all of the top answers
      *
-     * @param string $id The id of a question
-     *
-     * @return array
-     */
-    public function getById($id)
-    {
-        return $this->model->find($id)->with('answers', 'tags')->get()->toArray();
-    }
-
-
-    /**
-     * Get all of the top questions
-     *
-     * @param integer $limit  The limit of the amount of questions returned
-     * @param integer $offset The offset from when questions are returned
+     * @param integer $id  The id of a answer
      *
      * @return array
      */
-    public function getTopQuestions($limit, $offset)
+    public function getTopAnswer($id)
     {
-        return "top questions!";
-    }
-
-    /**
-     * Get a set of questions
-     *
-     * @param integer $limit  The limit of the amount of questions returned
-     * @param integer $offset The offset from when questions are returned
-     *
-     * @return array
-     */
-    public function getQuestions($limit = PHP_INT_MAX, $offset = 0)
-    {
-        return $this->model->take($limit)->skip($offset)->with('tags', 'answers')->get()->toArray();
+        return "top answer!";
     }
 
     /**
