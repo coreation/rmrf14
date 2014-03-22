@@ -2,6 +2,14 @@
 
 @section('content')
 
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">Topvragen</a></li>
+  <li><a href="#"><span class="badge">42</span> In de kijker</a></li>
+  <li><a href="#">Populair</a></li>
+  <li><a href="#">Deze week</a></li>
+  <li><a href="#">Deze maand</a></li>
+</ul>
+
 <div id="questions">
 	<div class="question">
 		<div class="stats">
