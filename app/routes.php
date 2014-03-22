@@ -20,7 +20,9 @@ Route::get('/', function()
 
 Route::get('/questions', function()
 {
-	return View::make('question');
+	$faker = Faker\Factory::create();
+
+	return View::make('question', array('faker' => $faker));
 });
 
 Route::get('/ask', function()

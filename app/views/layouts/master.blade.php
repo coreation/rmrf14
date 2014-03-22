@@ -12,7 +12,7 @@
 
     <div class="bar">
         <div class="container">
-            <div class="region">Regio Gent</div>
+            <div class="region"><a href="{{ URL::to('/') }}">Regio Gent</a></div>
             <div class="search">
                 <input type="text" class="form-control" placeholder="Zoeken">
             </div>

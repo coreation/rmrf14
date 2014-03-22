@@ -1,68 +1,46 @@
 @extends('layouts.master')
 
 @section('content')
+	<div class="page-header">
+		<h3>{{ $faker->text(60) }}</h3>
+	</div>
+
 	<div id="question">
-		<div class="row">
-			<h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+		<div class="stats">
+			<a href="upvote" class="upvote"><i class="fa fa-caret-up"></i></a>
+			<span class="votes">{{ $faker->randomNumber(1) }}</span>
+			<a href="downvote" class="downvote"><i class="fa fa-caret-down"></i></a>
 		</div>
-		<div class="row">
-			<div class="stats">
-				<a href="upvote" class="upvote">upvote</a>
-				<span class="votes">1</span>
-				<a href="downvote" class="downvote">downvote</a>
-			</div>
-			<div class="summary">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
-				
-			</div>
+		<div class="summary">
+			{{ $faker->text(600) }}
+
 			<div class="tags">
-				<a href="{{ URL::to('/tag') }}" class="label label-default">taga</a>
-				<a href="{{ URL::to('/tag') }}" class="label label-default">tagb</a>
-				<a href="{{ URL::to('/tag') }}" class="label label-default">tagc</a>
+				<a href="{{ URL::to('/tag') }}" class="label label-default">{{ $faker->text(10) }}</a>
+				<a href="{{ URL::to('/tag') }}" class="label label-default">{{ $faker->text(10) }}</a>
+				<a href="{{ URL::to('/tag') }}" class="label label-default">{{ $faker->text(10) }}</a>
 			</div>
-			<div class="started">12 minuten geleden <a href="">Jens Segers</a> 234</div>
+			<div class="started">{{ $faker->randomNumber(1) }} minuten geleden <a href="">{{ $faker->name }}</a> {{ $faker->randomNumber(2) }}</div>
 		</div>
 	</div>
 
 	<div id="answers">
-		<h4>4 antwoorden</h4>
+		<div class="page-header">
+			<h4>4 antwoorden</h4>
+		</div>
 
-		<div class="row">
+		@for ($i = 0; $i < 4; $i++)
+		<div class="answer">
 			<div class="stats">
-				<a href="upvote" class="upvote">upvote</a>
-				<span class="votes">7</span>
-				<a href="downvote" class="downvote">downvote</a>
-				<span class="answer">beste</span>
+				<a href="upvote" class="upvote"><i class="fa fa-caret-up"></i></a>
+				<span class="votes">{{ $faker->randomNumber(1) }}</span>
+				<a href="downvote" class="downvote"><i class="fa fa-caret-down"></i></a>
 			</div>
 			<div class="summary">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
-				<div class="started">12 minuten geleden <a href="">Jens Segers</a> 234</div>
+				{{ $faker->text }}
+				<div class="started">{{ $faker->randomNumber(1) }} minuten geleden <a href="">{{ $faker->name }}</a> {{ $faker->randomNumber(2) }}</div>
 			</div>
 		</div>
-		
-		<div class="row">
-			<div class="stats">
-				<a href="upvote" class="upvote">upvote</a>
-				<span class="votes">1</span>
-				<a href="downvote" class="downvote">downvote</a>
-			</div>
-			<div class="summary">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
-				<div class="started">12 minuten geleden <a href="">Jens Segers</a> 234</div>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="stats">
-				<a href="upvote" class="upvote">upvote</a>
-				<span class="votes">1</span>
-				<a href="downvote" class="downvote">downvote</a>
-			</div>
-			<div class="summary">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit Lorem ipsum dolor sit amet, consectetur adipiscing elit
-				<div class="started">12 minuten geleden <a href="">Jens Segers</a> 234</div>
-			</div>
-		</div>
+		@endfor
 
 	</div>
 @stop

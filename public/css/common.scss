@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 .container {
 	width: 800px;
@@ -16,6 +17,43 @@
 .badge {
 	background-color: #E83F1A;
 	border-radius: 4px;
+}
+
+.page-header {
+
+	margin-bottom: 0;
+
+	h3, h4 {
+		margin-bottom: 0;
+	}
+}
+
+.tags {
+
+	a {
+		background-color: #e0eaf1;
+		border-bottom: 1px solid #b3cee1;
+		border-right: 1px solid #b3cee1;
+		padding: 3px 4px 3px 4px;
+		margin: 2px 2px 2px 0;
+		text-decoration: none;
+		font-size: 90%;
+		line-height: 1.4;
+		white-space: nowrap;
+		display: inline-block;
+		border-radius: 0;
+		color: #4a6b82;
+		font-weight: normal;
+
+		&:hover {
+			color: #4a6b82;
+			background-color: #c4dae9;
+			border-bottom: 1px solid #c4dae9;
+			border-right: 1px solid #c4dae9;
+			text-decoration: none;
+		}
+	}
+
 }
 
 /*
@@ -53,6 +91,11 @@
 	.region {
 		font-size: 17px;
 		float: left;
+
+		a {
+			color: #FFF;
+			text-decoration: none;
+		}
 	}
 
 	.search {
@@ -77,93 +120,154 @@
 |--------------------------------------------------------------------------
 */
 
-.question {
-	border-bottom: 1px solid #eaeaea;
-	overflow: hidden;
-	padding: 11px 0;
+#questions {
+
+	.question {
+		border-bottom: 1px solid #eaeaea;
+		overflow: hidden;
+		padding: 11px 0;
+	}
+
+	.stats {
+
+		float: left;
+		margin-right: -190px;
+
+		& > div {
+			background: transparent;
+			float: left;
+			margin: 0 3px 0 0;
+			padding: 5px;
+			min-width: 48px;
+			height: 48px;
+			text-align: center;
+		}
+
+		.votes {
+			color: #555;
+		}
+
+		.answers {
+			color: #9a4444;
+		}
+
+		.views {
+			color: #999;
+		}
+
+		.count {
+			height: 25px;
+			font-size: 160%;
+			font-weight: normal;
+		}
+
+	}
+
+	.summary {
+
+		margin-left: 190px;
+
+		h3 {
+			font-size: 130%;
+			font-weight: bold;
+			margin: 0;
+			margin-bottom: 5px;
+			line-height: 1.3;
+		}
+
+		.started {
+			float: right;
+			padding-top: 6px;
+			color: #999;
+		}
+
+		.tags {
+			float: left;
+		}
+	}
 }
 
-.stats {
+/*
+|--------------------------------------------------------------------------
+| Question & answers
+|--------------------------------------------------------------------------
+*/
 
-	float: left;
-	margin-right: -190px;
+#question {
+	padding-top: 20px;
 
-	& > div {
-		background: transparent;
+	.stats {
 		float: left;
-		margin: 0 3px 0 0;
-		padding: 5px;
-		min-width: 48px;
-		height: 48px;
+		width: 50px;
+		margin-right: -60px;
 		text-align: center;
 	}
 
+	.summary {
+		margin-left: 60px;
+	}
+
 	.votes {
-		color: #555;
-	}
-
-	.answers {
-		color: #9a4444;
-	}
-
-	.views {
-		color: #999;
-	}
-
-	.count {
-		height: 25px;
-		font-size: 160%;
-		font-weight: normal;
-	}
-
-}
-
-.summary {
-
-	margin-left: 190px;
-
-	h3 {
-		font-size: 130%;
-		font-weight: bold;
-		margin: 0;
-		margin-bottom: 5px;
-		line-height: 1.3;
-	}
-
-	.started {
-		float: right;
-		padding-top: 6px;
-		color: #999;
+		font-size: 24px;
 	}
 
 	.tags {
+		margin-top: 20px;
+	}
 
-		float: left;
+	.started {
+		padding-top: 6px;
+		color: #999;
+	}
+}
 
-		a {
-			background-color: #e0eaf1;
-			border-bottom: 1px solid #b3cee1;
-			border-right: 1px solid #b3cee1;
-			padding: 3px 4px 3px 4px;
-			margin: 2px 2px 2px 0;
-			text-decoration: none;
-			font-size: 90%;
-			line-height: 1.4;
-			white-space: nowrap;
-			display: inline-block;
-			border-radius: 0;
-			color: #4a6b82;
-			font-weight: normal;
+.upvote, .downvote {
+	font-size: 40px;
+	color: #818185;
+	display: block;
+	height: 25px !important;
+	overflow: hidden;
 
-			&:hover {
-				color: #4a6b82;
-				background-color: #c4dae9;
-				border-bottom: 1px solid #c4dae9;
-				border-right: 1px solid #c4dae9;
-				text-decoration: none;
-			}
+	i {
+		position: relative;
+	}
+}
+
+.upvote i {
+	top: -7px;
+}
+
+.downvote i {
+	top: -8px;
+}
+
+#answers {
+
+	.answer {
+		border-bottom: 1px solid #eee;
+		padding-bottom: 20px;
+		padding-top: 20px;
+
+		.stats {
+			float: left;
+			width: 50px;
+			margin-right: -60px;
+			text-align: center;
 		}
 
+		.votes {
+			font-size: 24px;
+		}
+
+		.summary {
+			margin-left: 60px;
+			min-height: 75px;
+		}
+
+		.started {
+			padding-top: 6px;
+			color: #999;
+		}
 	}
 
 }
