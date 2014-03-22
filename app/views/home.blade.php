@@ -19,7 +19,7 @@
 			</div>
 		</div>
 		<div class="summary">
-			<h3><a href="/question"></a></h3>
+			<h3><a href="/question">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a></h3>
 			<div class="tags">
 				<a href="/tag/" class="label label-default">taga</a>
 				<a href="/tag/" class="label label-default">tagb</a>
@@ -29,6 +29,5 @@
 		</div>
 	</div>
 </div>
-
 
 @stop
