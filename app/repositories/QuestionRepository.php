@@ -40,9 +40,9 @@ class QuestionRepository extends BaseRepository implements QuestionRepositoryInt
      *
      * @return array
      */
-    public function getTopQuestions($limit, $offset)
+    public function getTopQuestions($limit = PHP_INT_MAX, $offset = 0)
     {
-        return "top questions!";
+        return $this->model->take($limit)->skip($offset)->with('tags', 'answers')->orderBy('votes', 'desc')->get()->toArray();
     }
 
     /**
