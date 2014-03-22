@@ -30,6 +30,22 @@
       </div>
     </div>
 	<div class='container'>
+
+	    <header>
+	    	<h1>Bread Crumbs<h1>
+	    	<span class="label label-default">Vragen</span>
+	    	<span class="label label-default">Tags</span>
+	    	<span class="label label-default">Gebruikers</span>
+	    	<span class="label label-danger pull-right">Nieuwe vraag</span>
+	    </header>
+		<ul class="nav nav-tabs">
+		  <li class="active"><a href="#">Topvragen</a></li>
+		  <li><a href="#">In de kijker</a></li>
+		  <li><a href="#">Populair</a></li>
+		  <li><a href="#">Deze week</a></li>
+		  <li><a href="#">Deze maand</a></li>
+		</ul>
+		
 	    @yield('content')
 	</div>
 
