@@ -32,7 +32,7 @@
 	<div class='container'>
 
 	    <header>
-	    	<h1>Bread Crumbs<h1>
+	    	<h1>Bread Crumbs</h1>
 	    	<span class="label label-default">Vragen</span>
 	    	<span class="label label-default">Tags</span>
 	    	<span class="label label-default">Gebruikers</span>
@@ -40,12 +40,12 @@
 	    </header>
 		<ul class="nav nav-tabs">
 		  <li class="active"><a href="#">Topvragen</a></li>
-		  <li><a href="#">In de kijker</a></li>
+		  <li><a href="#"><span class="badge">42</span> In de kijker</a></li>
 		  <li><a href="#">Populair</a></li>
 		  <li><a href="#">Deze week</a></li>
 		  <li><a href="#">Deze maand</a></li>
 		</ul>
-		
+
 	    @yield('content')
 	</div>
 
