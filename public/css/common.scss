@@ -1,5 +1,49 @@
 @import "bootstrap";
 
+.container {
+	width: 800px;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Header
+|--------------------------------------------------------------------------
+*/
+
+.header {
+	background-color: #000;
+	height: 35px;
+	line-height: 35px;
+	margin-bottom: 20px;
+	color: #FFF;
+
+	.region {
+		font-size: 17px;
+		padding-left: 10px;
+		float: left;
+	}
+
+	.search {
+		float: right;
+
+		input {
+			margin-top: 6px;
+			background-color: #FFF;
+			border-radius: 0;
+			border: 0;
+			font-size: 13px;
+			padding: 3px 6px;
+			height: auto;
+		}
+	}
+}
+
+/*
+|--------------------------------------------------------------------------
+| Home
+|--------------------------------------------------------------------------
+*/
+
 .question {
 	border-bottom: 1px solid #eaeaea;
 	overflow: hidden;
