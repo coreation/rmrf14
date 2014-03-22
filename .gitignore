@@ -1,0 +1,16 @@
+makefile
+*.DS_Store
+.settings
+.buildpath
+.project
+tmp/*
+/vendor
+composer.phar
+composer.lock
+/app/config/local
+/app/config/staging
+/app/config/production
+/bootstrap/compiled.php
+/installed/*
+!/installed/.gitkeep
+app/config/workbench.php
