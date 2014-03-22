@@ -6,6 +6,11 @@ class BaseRepository
 {
     protected $model;
 
+    public function __construct()
+    {
+
+    }
+
     /**
      * Get question based on an id
      *

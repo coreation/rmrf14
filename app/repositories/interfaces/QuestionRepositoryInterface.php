@@ -5,7 +5,7 @@ namespace repositories\interfaces;
 interface QuestionRepositoryInterface
 {
     /**
-     * Get question based on an id
+     * Get a question based on an id, with tags and answers
      *
      * @param string $id The id of a question
      *

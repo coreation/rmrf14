@@ -11,17 +11,4 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('home');
-});
-
-Route::get('/questions', function()
-{
-	return View::make('question');
-});
-
-Route::get('/ask', function()
-{
-	return View::make('ask');
-});
+Route::get('/', 'TestController@testDb');
