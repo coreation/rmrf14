@@ -32,7 +32,7 @@
 			</div>
 		</div>
 		<div class="summary">
-			<h3><a href="{{ URL::to('/questions') }}">{{  $questions[$faker->randomNumber(0,3)] }}</a></h3>
+			<h3><a href="{{ URL::to('/questions') }}">{{  $questions[array_rand($questions)] }}</a></h3>
 			<div class="tags">
 				<a href="#" class="label label-default">{{ $faker->text(10) }}</a>
 				<a href="#" class="label label-default">{{ $faker->text(10) }}</a>

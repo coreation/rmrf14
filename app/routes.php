@@ -17,8 +17,15 @@ Route::get('/', function()
 	$faker->addProvider(new Faker\Provider\nl_BE\Person($faker));
 	$questions = array( 'Grote tak is van boom gevallen',
 						'Vuilnisbakken tekort bij Sint-Pieters plein',
-						'Hoe lang duren de werken nog?',
-						'Toilet kapot');
+						'Hoe lang duren de werken aan de Voskenslaan nog?',
+						'Toilet kapot aan Dampoort',
+						'Meer vuilbakken nodig bij Gentbrugse Meersen',
+						'Geen straatverlichting meer in De Pinte',
+						'Wanneer zijn de Gentse Feesten?',
+						'Tot hoe laat is het Gravensteen open?',
+						'Grote putten in Jef Vandermeulenstraat',
+						'Op zoek naar gezellige terrasjes in Gent!',
+						'Wat is er momenteel te doen in Gent?');
 
 	return View::make('home', array('faker' => $faker, 'questions' => $questions));
 });
@@ -29,8 +36,15 @@ Route::get('/questions', function()
 
 	$questions = array( 'Grote tak is van boom gevallen',
 						'Vuilnisbakken tekort bij Sint-Pieters plein',
-						'Hoe lang duren de werken nog?',
-						'Toilet kapot');
+						'Hoe lang duren de werken aan de Voskenslaan nog?',
+						'Toilet kapot aan Dampoort',
+						'Meer vuilbakken nodig bij Gentbrugse Meersen',
+						'Geen straatverlichting meer in De Pinte',
+						'Wanneer zijn de Gentse Feesten?',
+						'Tot hoe laat is het Gravensteen open?',
+						'Grote putten in Jef Vandermeulenstraat',
+						'Op zoek naar gezellige terrasjes in Gent!',
+						'Wat is er momenteel te doen in Gent?');
 
 	return View::make('question', array('faker' => $faker, 'questions' => $questions));
 });

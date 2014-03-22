@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="page-header">
-		<h3>{{ $questions[$faker->randomNumber(0,3)] }}</h3>
+		<h3>{{ $questions[array_rand($questions)] }}</h3>
 	</div>
 
 	<div id="question">
