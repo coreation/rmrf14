@@ -10,12 +10,29 @@
 </head>
 <body>
 
+    <div class="bar">
+        <div class="container">
+            <div class="region">Regio Gent</div>
+            <div class="search">
+                <input type="text" class="form-control" placeholder="Zoeken">
+            </div>
+        </div>
+    </div>
+
 	<div class='container'>
+
+	    <div class="header">
+            <div class="ask pull-right">
+                <a href="{{ URL::to('ask') }}" class="btn btn-primary">Nieuwe vraag</a>
+            </div>
+
+            <div class="logo">
+                <img src="{{ URL::asset('img/logo.png') }}">
+            </div>
+	    </div>
+
 	    @yield('content')
 	</div>
 
-    <footer>
-        Bread Crumbs by RM RF
-    </footer>
 </body>
 </html>
