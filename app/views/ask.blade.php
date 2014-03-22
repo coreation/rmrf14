@@ -51,7 +51,7 @@
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Stel vraag</button>
+          <button type="submit" class="btn btn-primary">Stel vraag</button>
         </div>
       </div>
     </form>

@@ -14,6 +14,21 @@
 	}
 }
 
+.btn {
+	border-radius: 0;
+	border: 0;
+
+	&.btn-primary {
+		background-color: #777;
+	}
+}
+
+.form-control {
+	border-radius: 0;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
 .badge {
 	background-color: #E83F1A;
 	border-radius: 4px;
