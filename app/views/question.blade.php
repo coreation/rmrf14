@@ -44,17 +44,17 @@
 
 	</div>
 	<div id="answer">
-    <form class="form-horizontal" role="form">
+
+	<div class="page-header">
+		<h4>Antwoord</h4>
+	</div><br>
+
+    <form role="form">
       <div class="form-group">
-        <label for="inputBody" class="col-sm-2 control-label">Antwoord</label>
-        <div class="col-sm-10">
           <textarea class="form-control"  id="inputBody" placeholder="Antwoord" rows="5"></textarea>
-        </div>
       </div>
       <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-          <button type="submit" class="btn btn-default">Geef antwoord</button>
-        </div>
+        <button type="submit" class="btn btn-primary">Geef antwoord</button>
       </div>
     </form>
 
