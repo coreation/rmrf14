@@ -13,7 +13,9 @@
 
 Route::get('/', function()
 {
-	return View::make('home');
+	$faker = Faker\Factory::create();
+
+	return View::make('home', array('faker' => $faker));
 });
 
 Route::get('/questions', function()
