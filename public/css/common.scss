@@ -149,6 +149,10 @@
 
 		.answers {
 			color: #9a4444;
+
+			&.answered {
+				color: green;
+			}
 		}
 
 		.views {

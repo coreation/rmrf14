@@ -14,15 +14,24 @@
 Route::get('/', function()
 {
 	$faker = Faker\Factory::create();
+	$questions = array( 'Grote tak is van boom gevallen',
+						'Vuilnisbakken tekort bij Sint-Pieters plein',
+						'Hoe lang duren de werken nog?',
+						'Toilet kapot');
 
-	return View::make('home', array('faker' => $faker));
+	return View::make('home', array('faker' => $faker, 'questions' => $questions));
 });
 
 Route::get('/questions', function()
 {
 	$faker = Faker\Factory::create();
+	
+	$questions = array( 'Grote tak is van boom gevallen',
+						'Vuilnisbakken tekort bij Sint-Pieters plein',
+						'Hoe lang duren de werken nog?',
+						'Toilet kapot');
 
-	return View::make('question', array('faker' => $faker));
+	return View::make('question', array('faker' => $faker, 'questions' => $questions));
 });
 
 Route::get('/ask', function()

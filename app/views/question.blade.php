@@ -2,7 +2,7 @@
 
 @section('content')
 	<div class="page-header">
-		<h3>{{ $faker->text(60) }}</h3>
+		<h3>{{ $questions[$faker->randomNumber(0,3)] }}</h3>
 	</div>
 
 	<div id="question">
@@ -43,4 +43,20 @@
 		@endfor
 
 	</div>
+	<div id="answer">
+    <form class="form-horizontal" role="form">
+      <div class="form-group">
+        <label for="inputBody" class="col-sm-2 control-label">Antwoord</label>
+        <div class="col-sm-10">
+          <textarea class="form-control"  id="inputBody" placeholder="Antwoord" rows="5"></textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default">Geef antwoord</button>
+        </div>
+      </div>
+    </form>
+
+</div>
 @stop

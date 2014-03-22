@@ -18,7 +18,11 @@
 				<div class="count">{{ $faker->randomNumber(2) }}</div>
 				<div>votes</div>
 			</div>
+			@if ($i == 3 or $i == 8 or $i == 4)
+			<div class="answers answered">
+			@else
 			<div class="answers">
+			@endif
 				<div class="count">{{ $faker->randomNumber(1) }}</div>
 				<div>answers</div>
 			</div>
@@ -28,7 +32,7 @@
 			</div>
 		</div>
 		<div class="summary">
-			<h3><a href="{{ URL::to('/questions') }}">{{ $faker->text(60) }}</a></h3>
+			<h3><a href="{{ URL::to('/questions') }}">{{  $questions[$faker->randomNumber(0,3)] }}</a></h3>
 			<div class="tags">
 				<a href="{{ URL::to('/tag') }}" class="label label-default">{{ $faker->text(10) }}</a>
 				<a href="{{ URL::to('/tag') }}" class="label label-default">{{ $faker->text(10) }}</a>
